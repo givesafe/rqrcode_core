@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.1] - 2025-04-11
+
+- updating gems
+
 - Add option to use ENV `RQRCODE_CORE_ARCH_BITS` to overide the bits value (32 or 64) used during the encoding process.
   This has been shown to greatly reduce the memory usage but I can't prove it doesn't break anything for all people.
   Use at your own risk.

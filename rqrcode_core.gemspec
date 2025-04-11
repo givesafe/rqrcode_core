@@ -14,8 +14,12 @@ Gem::Specification.new do |spec|
     rqrcode_core is a Ruby library for encoding QR Codes. The simple
     interface (with no runtime dependencies) allows you to create QR Code data structures.
   EOF
-  spec.homepage = "https://github.com/whomwah/rqrcode_core"
+  spec.homepage = "https://github.com/givesafe/rqrcode_core"
   spec.license = "MIT"
+  spec.metadata = {
+    "bug_tracker_uri" => "https://github.com/givesafe/rqrcode/issues",
+    "changelog_uri" => "https://github.com/givesafe/rqrcode/blob/master/CHANGELOG.md"
+  }
 
   spec.files = Dir.chdir(File.expand_path("..", __FILE__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
@@ -24,9 +28,9 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.required_ruby_version = ">= 3.0.0"
+  spec.required_ruby_version = ">= 3.2"
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "minitest", "~> 5.0"
-  spec.add_development_dependency "standard", "~> 1.41"
+  spec.add_development_dependency "standard", "~> 1.49"
 end
